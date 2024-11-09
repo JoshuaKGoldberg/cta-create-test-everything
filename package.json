@@ -1,0 +1,70 @@
+{
+	"name": "cta-create-test-everything",
+	"version": "0.0.0",
+	"description": "Testing the create engine for CTA with the Everything base/preset",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JoshuaKGoldberg/cta-create-test-everything"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Josh Goldberg ✨",
+		"email": "npm@joshuakgoldberg.com"
+	},
+	"type": "module",
+	"main": "./lib/index.js",
+	"files": [
+		"LICENSE.md",
+		"README.md",
+		"lib/",
+		"package.json"
+	],
+	"scripts": {
+		"build": "tsup",
+		"format": "prettier .",
+		"lint": "eslint . --max-warnings 0",
+		"lint:knip": "knip",
+		"lint:md": "markdownlint \"**/*.md\" \".github/**/*.md\" --rules sentences-per-line",
+		"lint:packages": "pnpm dedupe --check",
+		"prepare": "husky",
+		"test": "vitest",
+		"tsc": "tsc"
+	},
+	"lint-staged": {
+		"*": "prettier --ignore-unknown --write"
+	},
+	"devDependencies": {
+		"@eslint-community/eslint-plugin-eslint-comments": "latest",
+		"@eslint/js": "latest",
+		"@types/node": "latest",
+		"@vitest/coverage-v8": "latest",
+		"@vitest/eslint-plugin": "latest",
+		"console-fail-test": "latest",
+		"eslint": "latest",
+		"eslint-plugin-jsdoc": "latest",
+		"eslint-plugin-jsonc": "latest",
+		"eslint-plugin-markdown": "latest",
+		"eslint-plugin-n": "latest",
+		"eslint-plugin-package-json": "latest",
+		"eslint-plugin-perfectionist": "latest",
+		"eslint-plugin-regexp": "latest",
+		"eslint-plugin-yml": "latest",
+		"husky": "latest",
+		"knip": "5.27.2",
+		"lint-staged": "latest",
+		"prettier": "latest",
+		"prettier-plugin-curly": "latest",
+		"prettier-plugin-packagejson": "latest",
+		"prettier-plugin-sh": "latest",
+		"tsup": "latest",
+		"typescript": "latest",
+		"typescript-eslint": "latest",
+		"vitest": "latest"
+	},
+	"engines": {
+		"node": ">=18.3.0"
+	},
+	"publishConfig": {
+		"provenance": true
+	}
+}
